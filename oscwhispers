@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+"""
+OSC Whispers
+    oscwhispers
+
+    Written By:
+        Shane Hutter
+
+
+    Description:
+        Acts as an OSC Server/Client combo to forward recieved OSC messages onto various OSC servers based on the path of
+        the OSC Messsage.
+"""
