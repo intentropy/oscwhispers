@@ -10,3 +10,8 @@ OSC Whispers
     Description:
         This module is for loading the configuration file used by OSC Whispers.
 """
+
+
+# Configuration CONSTANTS
+CONFIG_DIR  = "/etc"
+CONFIG_FILE = "oscwhispers.conf"
