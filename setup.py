@@ -40,7 +40,7 @@ setup(
             ( 
                 CONFIG_DIR          ,   # Configuration file
                 [ 
-                    CONFIG_FILE             ,   # ftposcd.conf
+                    CONFIG_FILE             ,
                     ]   ,
                 )   ,
             (
