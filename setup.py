@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-Fishman Tripleplay MIDI to OSC converter
-    ftposcd setup.py
+OSC Whispers setup.py
+    setup.py
 
     Written By:
         Shane Hutter
