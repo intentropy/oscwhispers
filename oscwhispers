@@ -6,7 +6,6 @@ OSC Whispers
     Written By:
         Shane Hutter
 
-
     Description:
         Acts as an OSC Server/Client combo to forward recieved OSC messages onto various OSC servers based on the path of
         the OSC Messsage.
