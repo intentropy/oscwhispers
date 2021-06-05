@@ -73,22 +73,19 @@ class OSCServer( ServerThread ):
             for _route in self._routes.get(
                 self._top_level_dir( _path )
                 ):
-                print( _route )
                 # Set path for message
                 if _route.get( "truncate" ):
                     _path_trunc = self._trunc_top_level_dir( _path )
                 else:
                     _path_trunc = _path
-                print( _path_trunc )
                 # Set target for message
                 _target = (
                     _route.get( "host" ),
                     _route.get( "port" ),
                     )
-                print( _target )
                 # Set args for the message
                 _args = []
                 for _arg in zip( _types , _values ):
                     _args.append( _arg )
-                print( _args )
+                # Forward the message
                 self.send( _target, _path_trunc , *_args )
