@@ -1,14 +1,13 @@
 # Configure the server for incoming OSC messages
 server:
-  listen: 127.0.0.1
   port: 9000
 
 # Define forwarding routes
 routes:
   pathname:
-    - host: 192.168.71.20
-      port: 9001
-      truncate: yes
+    - host: 127.0.0.2
+      port: 9003
+      truncate: no
     - host: 127.0.0.1
       port: 9001
       truncate: True

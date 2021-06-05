@@ -1,3 +1,3 @@
 #!/usr/bin/env python3
-"""oscw Package __init__
+"""OSCW Package __init__
 """

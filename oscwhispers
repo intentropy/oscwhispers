@@ -14,13 +14,17 @@ OSC Whispers
 
 from oscw.config        import Config
 from oscw.exceptions    import *
+from oscw.osc           import OSCServer
 
-# This is for testing, and will be replaced by argparse in oscw.args
+# Testing only imports
 from sys    import argv
+from time   import sleep
 
 
 if __name__ == "__main__":
     with Config(
         argv[1]
         ) as conf:
-        print( conf.config )
+        with OSCServer( conf ) as server:
+            while True:
+                sleep(1)
