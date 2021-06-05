@@ -11,3 +11,15 @@ OSC Whispers
         Acts as an OSC Server/Client combo to forward recieved OSC messages onto various OSC servers based on the path of
         the OSC Messsage.
 """
+
+from oscw.config    import Config
+
+# This is for testing, and will be replaced by argparse in oscw.args
+from sys    import argv
+
+
+if __name__ == "__main__":
+    with Config(
+        argv[1]
+        ) as conf:
+        print( conf.config )

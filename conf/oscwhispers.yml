@@ -1,0 +1,7 @@
+pathname:
+  - host: 192.168.71.20
+    port: 9001
+    truncate: yes
+  - host: 127.0.0.1
+    port: 9001
+    truncate: True
