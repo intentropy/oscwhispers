@@ -2,6 +2,8 @@
 """OSCW Configuration file parsing
 """
 
+from oscw.exceptions    import *
+
 from yaml   import safe_load
 
 class Config():

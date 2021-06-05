@@ -12,7 +12,8 @@ OSC Whispers
         the OSC Messsage.
 """
 
-from oscw.config    import Config
+from oscw.config        import Config
+from oscw.exceptions    import *
 
 # This is for testing, and will be replaced by argparse in oscw.args
 from sys    import argv
