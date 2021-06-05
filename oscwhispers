@@ -21,7 +21,7 @@ from argparse   import ArgumentParser
 
 
 def parse_args():
-    parser = ArgumentParser( description="Open Sound Control Whispers" )
+    parser = ArgumentParser( description="OSCWhispers, An Open Sound Control forwarding proxy" )
     parser.add_argument(
         "-c",
         "--config",
