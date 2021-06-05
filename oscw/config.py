@@ -29,13 +29,19 @@ class Config():
 
     def load_conf( self , config ):
         """Load the configuration file"""
-        self._conf = open(
-            self.config_file,
-            "r",
-            )
-        self.config = safe_load(
-            self._conf.read()
-            )
+        try:
+            self._conf = open(
+                self.config_file,
+                "r",
+                )
+        except:
+            raise OSCWNoConfig()
+        try:
+            self.config = safe_load(
+                self._conf.read()
+                )
+        except:
+            raise OSCWBadConfig()
         return
 
     def close_conf( self ):

@@ -16,14 +16,25 @@ from oscw.config        import Config
 from oscw.exceptions    import *
 from oscw.osc           import OSCServer
 
-# Testing only imports
-from sys    import argv
-from time   import sleep
+from time       import sleep
+from argparse   import ArgumentParser
 
+
+def parse_args():
+    parser = ArgumentParser( description="Open Sound Control Whispers" )
+    parser.add_argument(
+        "-c",
+        "--config",
+        nargs=1,
+        default="/etc/oscwhispers.yml",
+        help="Location of oscwhispers YAML configuration file",
+        )
+    return parser.parse_args()
 
 if __name__ == "__main__":
-    with Config(
-        argv[1]
+    args = parse_args()
+    with Config( 
+        args.config[ 0 ] 
         ) as conf:
         with OSCServer( conf ) as server:
             while True:

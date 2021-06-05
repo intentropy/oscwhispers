@@ -4,11 +4,7 @@
 
 # Config
 class OSCWNoConfig( Exception ):
-    """MNo Config file has been loaded"""
-    pass
-
-class OSCWNoSuchFile( Exception ):
-    """The specified configuration file does not exist"""
+    """No Config file has been loaded"""
     pass
 
 class OSCWBadConfig( Exception ):
