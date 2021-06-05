@@ -20,7 +20,7 @@ class OSCServer( ServerThread ):
             raise OSCWBadConfig()
         self._server_conf = self._config.get( "server" )
         self._routes = self._config.get( "routes" )
-        if not self._server_conf.get("port"):
+        if not self._server_conf.get( "port" ):
             raise OSCWBadConfig()
         # Init super
         super().__init__( 
