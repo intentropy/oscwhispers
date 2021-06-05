@@ -15,14 +15,13 @@ class OSCServer( ServerThread ):
         """
         # Load configuration
         self._config = config.config
-        if not self._config.get( "server" ):
+        if not self._config.get( "server" )\
+            or not self._config.get( "routes" ):
             raise OSCWBadConfig()
         self._server_conf = self._config.get( "server" )
+        self._routes = self._config.get( "routes" )
         if not self._server_conf.get("port"):
             raise OSCWBadConfig()
-        if not self._config.get( "routes" ):
-            raise OSCWBadConfig
-        self._routes = self._config.get( "routes" )
         # Init super
         super().__init__( 
             self._server_conf.get( "port" )
