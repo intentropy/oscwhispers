@@ -11,3 +11,6 @@ OSC Whispers setup.py
 """
 
 from distutils.core     import setup
+from oscw               import _setup
+
+setup( **_setup )
