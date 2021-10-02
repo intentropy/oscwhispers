@@ -25,13 +25,6 @@ _data_files = [
             "oscwhispers",
             ],
         ),
-    (   # Documentation
-        _docs_dir,
-        [
-            "README.md",
-            "LICENSE",
-            ],
-        ),
     (   # Config
         "/etc",
         [
