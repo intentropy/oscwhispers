@@ -4,23 +4,8 @@
 
 from os.path    import exists
 
-## Determine and load documentation
-_docs_dir = "/usr/share/doc/oscwhispers"
-# README file
-_README = None
-if exists( f"{_docs_dir}/README.md" ):
-    _README= open( f"{_docs_dir}/README.md" ).read()
-elif exists( "../README.md" ):
-    _README= open( "../README.md" ).read()
-# LICENSE file
-_LICENSE = None
-if exists( f"{_docs_dir}/LICENSE" ):
-    _README= open( f"{_docs_dir}/LICENSE" ).read()
-elif exists( "../LICENSE" ):
-    _LICENSE = open( "../LICENSE.md" ).read()
 
 ## Setup variables for installation/packaging
-
 # Determine init system here
 """
     For now I'm only working with systemd
@@ -73,7 +58,6 @@ _setup = {
     "maintainer": _author,
     "maintainer_email": _email,
     "description": _description,
-    "long_description": _README,
     "license": "GNU GPL v3.0",
     "packages": _packages,
     "data_files": _data_files,
