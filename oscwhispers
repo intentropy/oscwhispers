@@ -32,9 +32,10 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    with Config( 
-        args.config[ 0 ] 
-        ) as conf:
+    _conf = args.config
+    if type( _conf ) == list:
+        _conf = _conf[ 0 ]
+    with Config( _conf ) as conf:
         with OSCServer( conf ) as server:
             while True:
                 sleep(1)
