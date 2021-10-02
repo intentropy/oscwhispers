@@ -44,12 +44,15 @@ _data_files = [
 
 _packages = [ "oscw" ]
 
+_version = "0.0.1"
+_description = "An Open Sound Control proxying server"
+
 _setup = {
     "name": "oscwhispers",
-    "version": "0.0.1",
+    "version": _version,
     "author": "Shane Hutter",
-    "authot_email": "shane@intentropycs.com",
-    "description": "An Open Sound Control proxying server",
+    "author_email": "shane@intentropycs.com",
+    "description": _description,
     "long_description": _README,
     "license": _LICENSE,
     "packages": _packages,
