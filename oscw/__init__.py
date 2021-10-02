@@ -17,7 +17,7 @@ _LICENSE = None
 if exists( f"{_docs_dir}/LICENSE" ):
     _README= open( f"{_docs_dir}/LICENSE" ).read()
 elif exists( "../LICENSE" ):
-    _LICENSE = open( "../LICENSE.md" ).()
+    _LICENSE = open( "../LICENSE.md" ).read()
 
 ## Setup variables for installation/packaging
 _data_files = [
